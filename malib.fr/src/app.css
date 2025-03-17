@@ -1,0 +1,25 @@
+@font-face{font-family:malib; src:url("/fonts/malib.ttf");}
+@font-face{font-family:futural; src:url("/fonts/futura_light.otf");}
+@font-face{font-family:futurar; src:url("/fonts/futura.otf");}
+@font-face{font-family:futura; src:url("/fonts/futura.otf");}
+@font-face{font-family:palatino; src:url("/fonts/palatino.otf");}
+@font-face{font-family:baskerville; src:url("/fonts/baskerville.otf");}
+@font-face{font-family:garamond; src:url("/fonts/garamond.otf");}
+@font-face{font-family:montserrat; src:url("/fonts/montserrat.otf");}
+.min-h-95{min-height:95vh;}
+html{width:100%;background-color:rgb(18,18,18);}
+body{width:100%;min-width:320px;margin:auto;color:white;}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    @variants responsive {
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none; 
+          scrollbar-width: none;  
+      }
+    }
+  }

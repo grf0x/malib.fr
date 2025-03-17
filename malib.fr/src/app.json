@@ -1,0 +1,435 @@
+{
+    "local_url":"https://malib.fr", 
+    "api_url":"https://api.malib.fr", 
+    "book_url":"https://static.malib.fr/book/",
+    "stripe_pubkey":"****REDACTED****",
+    "pages":
+    {
+        "welcome": {"route":"/", "title":"Accueil", "footer":false},
+        "subscribe": {"route":"/abonnement", "title":"S'abonner", "footer":false},
+        "register": {"route":"/inscription", "title":"S'inscrire", "footer":false},
+        "login": {"route":"/connexion", "title":"S'identifier", "footer":false},
+        "preferences": {"route":"/preferences", "title":"Préférences", "footer":false},
+        "new_book": {"route":"/nouveau-livre", "title":"Nouveau livre", "footer":false},
+        "book": {"route":"/livre", "title":"Livre", "footer":false},
+        "referral": {"route":"/parrainage", "title":"Parrainage", "footer":false},
+        "account": {"route":"/compte", "title":"Compte", "footer":false},
+        "password_recovery": {"route":"/reinitialiser-son-mot-de-passe", "title":"Mot de passe oublié", "footer":false},
+        "change_password": {"route":"/changer-mon-mot-de-passe", "title":"Changer mon mot de passe", "footer":false},
+        "change_email": {"route":"/changer-mon-email", "title":"Changer mon adresse e-mail", "footer":false},
+        "confirm_email": {"route":"/confirmation-e-mail", "title":"Confirmer mon adresse e-mail", "footer":false},
+        "unsubscribe": {"route":"/se-desabonner", "title":"Se désabonner", "footer":false},
+        "delete_account": {"route":"/supprimer-mon-compte", "title":"Supprimer mon compte", "footer":false},
+        "confirmation": {"route":"/confirmation", "title":"Confirmation", "footer":false},
+        "reader": {"route":"/liseuse", "title":"Liseuse", "footer":false},
+        "library": {"route":"/bibliotheque", "title":"Bibliothèque", "footer":false},
+        "legal": {"route":"/mentions-legales", "title":"Mentions légales", "footer":true},
+        "terms": {"route":"/conditions-d-utilisation", "title":"Conditions d'utilisation", "footer":true},
+        "privacy": {"route":"/confidentialite", "title":"Confidentialité", "footer":true},
+        "contact": {"route":"/nous-contacter", "title":"Nous contacter", "footer":true},
+        "questions": {"route":"/questions-frequentes", "title":"Questions fréquentes", "footer":true},
+        "network_failed": {"route":"/probleme-de-connexion", "title":"Problème de connexion", "footer":false}
+    },
+    "questions":
+    [
+        {"question":"Combien coûte un abonnement ?", "answer":"L'abonnement mensuel est au prix fixe de 6,99€, vous pouvez réduire ce tarif à 5,99€ en parrainant un ami. Pas de contrat ni de frais supplémentaires.", "welcome_page":true},
+        {"question":"Comment puis-je annuler mon abonnement ?", "answer":"Malib est sans engagement, vous pouvez annuler votre abonnement à tout moment. Il n'y a aucuns frais d'annulation.", "welcome_page":true},
+        {"question":"Puis-je télécharger les livres ?", "answer":"Oui ! Vous pouvez télécharger les livres au format ePub.", "welcome_page":true},
+        {"question":"Sur quels appareils puis-je lire mes livres ?", "answer":"Vous pouvez lire vos livres directement sur malib.fr (mobile, tablette ou ordinateur) ou sur une liseuse compatible avec le format ePub. Nous recommandons l'utilisation d'un écran large pour un meilleur confort de lecture.", "welcome_page":true},
+        {"question":"Quels livres puis-je lire ?", "answer":"Le répertoire de Malib contient plusieurs milliers d'ouvrages. Les livres recommandés sont séléctionnés en fonction de vos goûts parmi ce large panel.", "welcome_page":true},
+        {"question":"Ma bibliothèque numérique se vide-t-elle lorsque je me désabonne ?", "answer":"Non, vous perdez uniquement l'accès à votre bibliothèque.", "welcome_page":false}
+    ],
+    "header":
+    {
+        "new_book":"nouveaux livres en attente",
+        "choose_book":"Choisir un livre"
+    },
+    "label":
+    {
+        "email":"Adresse e-mail",
+        "your_email":"Votre adresse e-mail",
+        "new_email":"Nouvelle adresse e-mail",
+        "password":"Mot de passe",
+        "confirm_password":"Confirmer le mot de passe",
+        "old_password":"Ancien mot de passe",
+        "new_password":"Nouveau mot de passe",
+        "first_name":"Prénom",
+        "last_name":"Nom",
+        "card_num":"Numéro de carte",
+        "card_date":"Date d'expiration (MM/AA)",
+        "card_crypto":"Cryptogramme"
+    },
+    "error":
+    {
+        "default":"Un problème est survenu, veuillez réessayer plus tard.",
+        "empty_field": "Ce champ est obligatoire.",
+        "email": "Veuillez entrer une adresse e-mail valide.",
+        "password": "Votre mot de passe doit contenir au moins 8 caractères.",
+        "password_identical": "L'ancien et le nouveau mot de passe sont identiques.",
+        "bad_credentials":"Adresse e-mail ou mot de passe incorrect.",
+        "bad_old_password":"Ancien mot de passe incorrect.",
+        "account_exists":"Un compte lié à cette adresse e-mail existe déjà.",
+        "already_member":"Vous êtes déjà abonné.",
+        "user_does_not_exist":"Cette adresse e-mail n'est liée à aucun compte.",
+        "passwords_do_not_match":"Les mots de passe ne sont pas identiques.",
+        "too_many_requests":"Trop de tentatives, veuillez attendre quelques minutes.",
+        "expired_token":"Le lien que vous avez suivi a expiré.",
+        "used_token":"Vous avez déjà utilisé ce lien.",
+        "bad_token":"Le lien que vous avez suivi est invalide.",
+        "multiple_choices":"Veuillez choisir une ou plusieurs réponses.",
+        "invalid_entry":"Veuillez taper : ",
+        "choice":"Veuillez choisir une réponse.",
+        "area":"Ce champ peut contenir au maximum 1000 caractères.",
+        "not_yet":"Les inscriptions sont closes pour le moment."
+    },
+    "button":
+    {
+        "next":"Suivant",
+        "return":"Retour",
+        "cancel":"Annuler",
+        "continue":"Continuer",
+        "confirm":"Valider",
+        "read":"Lire",
+        "activate_membership":"Activer mon abonnement",
+        "reset":"Réinitialiser",
+        "send":"Envoyer",
+        "notes":"Notes",
+        "confirm_copy":"Copié !",
+        "accept":"Ajouter ce livre à la bibliothèque",
+        "not_interested":"Pas intéressé",
+        "already_read":"Déjà lu",
+        "download":"Télécharger",
+        "choose_book":"Choisir un livre",
+        "unsubscribe":"Se désabonner",
+        "read_next":"Lire la suite"
+    },
+    "welcome":
+    {
+        "bg":"bg.jpg",
+        "first_main_title":"Recevez un livre numérique chaque semaine.",
+        "second_main_title":"Découvrez de nouveaux ouvrages. C'est sans engagement, vous pouvez annuler à tout moment.",
+        "third_main_title":"Saisissez votre adresse e-mail pour vous abonner.",
+        "new_book":{"title":"Découvrez des ouvrages qui vous correspondent.", "subtitle":"Grâce à l'intelligence artificielle pas de prise de tête, vous recevez un livre adapté à vos goûts chaque semaine."},
+        "library":{
+            "title":"Remplissez votre bibliothèque numérique.", 
+            "subtitle":"À lire maintenant ou plus tard, vos livres sont toujours à portée de main.",
+            "selected_book":{"title":"1984", "author":"George Orwell", "summary":"De tous les carrefours importants, le visage à la moustache noir vous fixait du regard. Il y en avait un sur le mur d’en face. BIG BROTHER VOUS REGARDE, répétait la légende, tandis que le regard des yeux noirs pénétrait les yeux de Winston… Au loin, un hélicoptère glissa entre les toits, plana un moment, telle une mouche bleue, puis repartit comme une flèche, dans un vol ..."},
+            "books":[
+                {"title":"Martin Eden", "author":"Jack London"},
+                {"title":"Germinal", "author":"Émile Zola"},
+                {"title":"L'Avare", "author":"Molière"},
+                {"title":"L'Enfer", "author":"Dante Alighieri"},
+                {"title":"Le Cid", "author":"Pierre Corneille"},
+                {"title":"Antigone", "author":"Jean Anouilh"},
+                {"title":"L'Odyssée", "author":"Homère"},
+                {"title":"Candide", "author":"Voltaire"},
+                {"title":"Dom Juan", "author":"Molière"},
+                {"title":"Madame Bovary", "author":"Gustave Flaubert"},
+                {"title":"Anna Karénine", "author":"Léon Tolstoï"},
+                {"title":"L'Étranger", "author":"Albert Camus"},
+                {"title":"1984", "author":"George Orwell"},
+                {"title":"Moby Dick", "author":"Herman Melville"}
+            ]
+        },
+        "reader":{"title":"Pas besoin de matériel supplémentaire.", "subtitle":"Malib intègre sa propre liseuse, vous lisez vos livres directement sur votre navigateur internet."}
+    },
+    "login":
+    {
+        "remember_me":"Se souvenir de moi",
+        "forgotten_password":"Mot de passe oublié ?",
+        "first_visit":"Première viste ? Inscrivez-vous."
+    },    
+    "register":
+    {
+        "subtitle":"Encore une étape et vous serez abonné !",
+        "already_member":"Déjà inscrit ? Connectez-vous."
+    },
+    "terms":
+    {
+        "intro":"L’utilisation de ce site implique l’acceptation pleine et entière des conditions générales d’utilisation décrites ci-dessous. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, une notification vous sera envoyée si tel est le cas. Si vous ne souhaitez pas reconnaître ou accepter les modifications apportées, veuillez cesser d'utiliser ce site.",
+        "sections":
+        [
+            {"title":"Nous contacter" ,"content":"Pour toute question concernant votre compte ou les conditions d'utilisation, veuillez utiliser le formulaire accessible sur la page \"Nous contacter\" ou envoyez votre demande directement par e-mail à l'adresse suivante : contact@malib.fr."},
+            {"title":"Confidentialité" ,"content":"Les règles de confidentialité sont énoncées sur la page \"Confidentialité\"."},
+            {"title":"Service" ,"content":"Malib, ainsi que tout contenu auquel vous accédez via le service, est réservé à un usage uniquement personnel et non commercial. Pendant la durée de votre abonnement, nous vous accordons un droit limité d'accès à votre bibliothèque et vos crédits pour ajouter un nouveau livre à votre bibliothèque. Malib et les ouvrages disponibles sont régulièrement mis à jour. Tous les livres de votre bibliothèque sont téléchargeables et accessibles sur Malib à condition que vous disposiez d'un abonnement en cours de validité. Vous pouvez partager les œuvres téléchargées si une mention explicite est inscrite à la fin de l'ouvrage, dans le cas contraire, il est interdit de reproduire, distribuer, modifier, afficher, produire, publier, concéder, créer des œuvres dérivées, vendre ou utiliser ce contenu. Vous acceptez la possibilité de ne plus pouvoir ajouter de nouveaux ouvrages à votre bibliothèque dans le cas où vous auriez épuisé la totalité de notre répertoire. En cas de perte des droits d'auteur, Malib peut retirer à tout moment un ouvrage de sa base de données et donc de votre bibliothèque ; un algorithme d'intelligence artificielle est utilisé pour générer le résumé des ouvrages, certaines erreurs, imprécisions ou incohérences peuvent apparaître."},
+            {"title":"Compte" ,"content":"Votre mot de passe et vos identifiants sont réservés à votre usage personnel et doivent demeurer confidentiels. Si vous permettez à d'autres d'accéder à votre compte, vous acceptez que ces personnes agissent en votre nom et d'être lié aux éventuelles modifications qu'elles pourraient apporter au compte, y compris, mais sans s'y limiter, les modifications apportées à l'abonnement. Afin de contribuer à garder le contrôle du compte et d'empêcher tout utilisateur non autorisé d'y accéder, vous devez garder le contrôle des appareils qui sont utilisés pour accéder au service et ne communiquer à personne votre mot de passe. Vous acceptez de fournir et maintenir des informations exactes relatives à votre compte, y compris une adresse e-mail valide pour que nous puissions vous envoyer des notifications liées au compte. Nous pouvons résilier ou suspendre votre compte afin de vous protéger, ainsi que pour protéger Malib ou ses partenaires, contre toute usurpation d'identité ou toute autre activité frauduleuse."},
+            {"title":"Interdictions" ,"content":"Sauf autorisation de notre part, vous acceptez de ne pas : contourner, retirer, modifier, désactiver, détruire, bloquer, masquer ou contrecarrer les protections des contenus, y compris l'interface graphique utilisateur, les avis de droit d'auteur et les marques déposées ; utiliser des robots, des outils d'aspiration ou d'autres méthodes automatisées pour accéder à Malib ; décompiler, faire de l'ingénierie inverse ou démonter tout logiciel, produit ou processus accessible sur Malib ; insérer tout code ou manipuler le contenu de Malib, de quelque façon que ce soit ; utiliser toute méthode d'exploration, de collecte ou d'extraction de données ; télécharger, afficher, envoyer par e-mail, envoyer ou transmettre de quelque façon que ce soit n'importe quel contenu en vue d'interrompre, détruire ou restreindre la fonctionnalité de tout logiciel ou équipement informatique ou de télécommunication associée à Malib, y compris tout virus, tout autre code, fichier ou programme informatique ; nous nous réservons le droit de résilier ou de restreindre votre utilisation de notre service si vous enfreignez les présentes Conditions d'utilisation ou faites une utilisation illégale ou frauduleuse du service."},
+            {"title":"Abonnement" ,"content":"Votre abonnement se poursuit jusqu'à sa résiliation. Pour utiliser Malib, vous devez avoir un accès à internet et un appareil compatible. À moins que vous ne résiliiez votre abonnement avant votre date de facturation, vous nous autorisez à vous facturer les frais d'abonnement pour le prochain cycle de facturation via votre mode de paiement. Lorsque vous êtes abonné, vous recevez un crédit pour ajouter un livre à votre bibliothèque chaque semaine."},
+            {"title":"Facturation et Résiliation" ,"content":"Les frais d'abonnement à Malib seront facturés via notre processeur de paiement Stripe, la date de paiement est indiquée sur la page \"Compte\". Pour utiliser Malib, vous devez nous fournir un mode de paiement valide. Vous nous autorisez à prélever tout mode de paiement associé à votre compte. Vous êtes redevable de tout montant non prélevé. Si le règlement d'un paiement échoue en raison de l'expiration du mode de paiement, d'un solde insuffisant ou pour tout autre motif, et que vous ne résiliez pas votre compte, nous pouvons suspendre votre accès à notre service jusqu'à ce que nous ayons réussi à prélever un mode de paiement valide. Pour certains modes de paiement, le prestataire peut vous facturer certains frais, tels que des frais sur les transactions internationales ou d'autres frais relatifs au traitement de votre mode de paiement. Les frais liés aux taxes locales peuvent varier selon le mode de paiement utilisé. Veuillez vous adresser au prestataire de votre mode de paiement pour en savoir plus. Vous pouvez résilier votre abonnement à tout moment et vous continuerez d'avoir accès au service jusqu'à la fin de votre période de facturation. Les paiements sont non remboursables et nous n'accordons aucun remboursement ou crédit pour les périodes d'utilisation partielle. Pour résilier votre abonnement, accédez à la page \"Compte\" et suivez les instructions. Si vous résiliez votre abonnement, votre compte perdra accès à sa bibliothèque. Nous pouvons modifier nos abonnements ainsi que le prix de notre service ponctuellement. Toutefois, toute modification de tarification ou d'abonnement ne sera applicable qu'après un délai minimum de 30 jours suivant la réception d'une notification de notre part. Si vous ne souhaitez pas accepter la modification de tarification ou de votre abonnement, vous pouvez annuler votre abonnement avant la prise d'effet de ces modifications."},
+            {"title":"Parrainage" ,"content":"Vous pouvez parrainer un ou plusieurs utilisateurs pour accéder à certains avantages. Pour valider le parrainage, l'utilisateur doit s'abonner lorsque vous êtes également abonné. Si l'utilisateur parrainé vide son cache ou supprime ses cookies après avoir suivi votre lien de parrainage et avant de s'abonner, le parrainage ne pourra pas être validé."},
+            {"title":"Mineurs" ,"content":"Vous devez avoir au moins 18 ans pour vous abonner. Les mineurs peuvent utiliser ce service uniquement avec l'accord d'un parent ou d'un tuteur légal."},
+            {"title":"Dernière mise à jour", "content":"22 février 2023"}
+        ]
+    },
+    "privacy":
+    {
+        "intro":"Cette déclaration de confidentialité explique nos pratiques concernant la collecte et l'utilisation de vos données personnelles. Elle est susceptible d’être modifiée ou complétée à tout moment, une notification vous sera envoyée si tel est le cas. Si vous ne souhaitez pas reconnaître ou accepter les modifications apportées, veuillez cesser d'utiliser ce site.",
+        "sections":
+        [
+            {"title":"Nous contacter" ,"content":"Pour toute question concernant votre compte ou cette déclaration de confidentialité, veuillez utiliser le formulaire accessible sur la page \"Nous contacter\" ou envoyez votre demande directement par e-mail à l'adresse suivante : contact@malib.fr."},
+            {"title":"Utilisation des données collectées" ,"content":"Les données collectées sur Malib sont destinées à un usage interne uniquement, elles servent à la facturation, à la gestion de votre compte et à l'amélioration de notre système de recommandation. Notre processeur de paiement Stripe est le seul tiers avec qui nous partageons certaines de vos données, les informations communiquées sont vos données bancaires et votre e-mail. Il est à noter que Malib ne stocke pas vos données bancaires sur ses serveurs. Les données stockées sont les suivantes : nom, e-mail, adresse ip, parrainage, abonnement, bibliothèque, préférences de communication, préférences de lecture, préférences d'interface et dates d'activité."},
+            {"title":"Suppression des données" ,"content":"Toutes vos données personnelles stockées sur Malib sont supprimées lors de la fermeture de votre compte. Il est impossible de les récupérer si vous décidez de revenir sur notre plateforme. Merci de noter que notre processeur de paiement Stripe conserve les factures liées à votre adresse e-mail."},
+            {"title":"Cookies" ,"content":"Les cookies sont des fichiers d'informations qui sont stockés sur votre appareil lorsque vous visitez des sites Web ou des services en ligne. Nous utilisons une technologie similaire pour stocker vos identifiants et éventuellement le code de votre parrain dans le cas où vous auriez suivi un lien de parrainage. Aucune autre information n'est stockée de manière permanente sur votre appareil."},
+            {"title":"Communications" ,"content":"Si vous ne souhaitez pas recevoir nos sollicitations commerciales ou certaines notices d'informations, vous pouvez modifier vos préférences de communication sur la page \"Compte\"."},
+            {"title":"Vos droits" ,"content":"Conformément à la réglementation relative aux données personnelles, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation, de portabilité, d’un droit d’opposition pour motif légitime. Ces droits peuvent être exercés en nous contactant, toutes les informations nécessaires sont dans la rubrique \"Nous contacter\" ci-dessus. Si vous estimez après nous avoir contactés que vos droits \"informatiques et libertés\" ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL."},
+            {"title":"Dernière mise à jour", "content":"22 février 2023"}
+        ]
+    },
+    "legal":
+    {
+        "about_us":"Qui sommes-nous ?",
+        "company_name":"MALIB",
+        "company_street":"****REDACTED****",
+        "company_city":"****REDACTED****",
+        "company_number":"****REDACTED****",
+        "email":"****REDACTED****",
+        "about_provider": "Hébergeur",
+        "provider_name":"OVH",
+        "provider_street":"2 rue Kellermann",
+        "provider_city":"59100 ROUBAIX",
+        "sources_title":"Crédits",
+        "sources":[
+            {"name":"****REDACTED****" ,"link":"****REDACTED****"}
+        ]
+    },
+    "referral":
+    {
+        "title":"Parrainez un ami ! Le prix de votre abonnement passera de 6,99€ à 5,99€ par mois.",
+        "subtitle":"Recevez également 2 livres gratuits pour chaque parrainage.",
+        "share_code":"Partagez votre code parrain :",
+        "share_link":"Partagez votre lien de parrainage :",
+        "copy_link":"Copier mon lien de parrainage",
+        "copy_link_info":"La réduction sur votre abonnement est permanente. Vous devez être abonné au moment du parrainage pour l'obtenir."
+    },
+    "password_recovery":
+    {
+        "reset_title":"Réinitialiser le mot de passe"
+    },
+    "subscribe":
+    {
+        "title":"Abonnez-vous pour 6,99€ par mois.",
+        "subtitle":"Vous pouvez résilier votre abonnement à tout moment, c'est sans engagement.",
+        "referral_code":"Code parrain",
+        "card":"Ou payer par carte",
+        "terms":"En confirmant votre abonnement, vous nous autorisez à débiter votre carte pour ce paiement et les paiements futurs conformément à nos conditions d'utilisations.",
+        "promo":"Code Promo",
+        "already_discount":"Vous bénéficiez déjà d'une réduction sur votre abonnement.",
+        "not_eligible":"Vous n'êtes pas éligible à cette offre.",
+        "invalid_promo":"Ce code promo n'existe pas ou est expiré."
+    },
+    "book":
+    {
+        "notes":"Prise de notes",
+        "recommend":"Recommander ce livre",
+        "keyword_analysis":"Analyse par mots-clés",
+        "emotion_analysis":"Analyse émotionnelle",
+        "progress_one":"Vous avez lu",
+        "progress_two":"de ce livre.",
+        "big_rating":"Avez-vous aimé ce livre ?",
+        "report_summary":"Le résumé de ce livre est généré par intelligence artificielle, merci de nous signaler les erreurs de grammaire, d'orthographe, ainsi que les éventuelles incohérences.",
+        "report_analysis":"Cette analyse est générée par intelligence artificielle, merci de nous signaler toute incohérence."
+    },
+    "account":
+    {
+        "credentials":"Identifiants",
+        "membership":"Abonnement et facturation",
+        "member_since":"Abonné depuis",
+        "next_bill_one":"Prochaine facturation de",
+        "next_bill_two":"le",
+        "change_email":"Changer mon adresse mail",
+        "unsubscribe":"Annuler mon abonnement",
+        "cancel_unsubscribe":"Annuler la procédure de désabonnement",
+        "subscribe":"S'abonner",
+        "not_a_member":"Vous n'êtes pas abonné",
+        "change_payment_method":"Changer mon mode de paiement",
+        "membership_fee":"Prix de l'abonnement :",
+        "notifications":"Notifications par e-mail",
+        "new_book":"Récéption d'un nouveau livre",
+        "referral":"J'ai parrainé un ami",
+        "membership_expiration":"Mon abonnement a expiré",
+        "ads":"Recevoir des offres promotionnelles",
+        "change_password":"Changer mon mot de passe",
+        "cancel_subscription_on":"Votre abonnement prendra fin le ",
+        "password":"••••••••••••••"
+    },
+    "unsubscribe":{
+        "title":"Annuler mon abonnement",
+        "details_one":"Si vous annulez votre abonnement, la prochaine facturation n'aura pas lieu. Vous profiterez de votre abonnement actuel jusqu'au ",
+        "details_two":". Passé cette date vous n'aurez plus accès à votre bibliothèque."
+    },
+    "notes":
+    {
+        "back_to_book":"Reprendre la lecture",
+        "share_notes":"Partager mes notes"
+    },
+    "preferences":
+    {
+        "keyword":"Cliquez sur les mots-clés que vous aimez.",
+        "share_notes":"Partager mes notes",
+        "form": [
+            {
+                "title":"Quel type de lecteur êtes-vous ?", 
+                "name":"pref_reader_type",
+                "options":[
+                    {"label":"Je débute la lecture", "value":1, "selected":false},
+                    {"label":"Je lis moins de 5 livres par an", "value":0.5, "selected":false}, 
+                    {"label":"Je suis déjà un gros lecteur", "value":0, "selected":false}
+                ],
+                "multiple":false
+            },
+            {
+                "title":"Quel style de livre avez-vous lu dans le passé ?", 
+                "name":"pref_time_period",
+                "options":[
+                    {"label":"Plutôt des classiques", "value":0, "selected":false},
+                    {"label":"Plutôt des nouveautés", "value":1, "selected":false}, 
+                    {"label":"Un peu de tout", "value":0.5, "selected":false}
+                ],
+                "multiple":false
+            },
+            {
+                "title":"Vous aimez quand un livre est ...", 
+                "name":"pref_complexity",
+                "options":[
+                    {"label":"Facile à lire", "value":0, "selected":false},
+                    {"label":"Riche et complexe", "value":1, "selected":false}, 
+                    {"label":"Peu importe", "value":0.5, "selected":false}
+                ],
+                "multiple":false
+            },
+            {
+                "title":"Choisissez les mots-clés qui vous correspondent.", 
+                "name":"keywords",
+                "options":[
+                    {"label":"Biographie", "name":"pref_keyword_biographie", "selected":false},
+                    {"label":"Drame", "name":"pref_keyword_drame", "selected":false},
+                    {"label":"Histoire vraie", "name":"pref_keyword_histoire_vraie", "selected":false},
+                    {"label":"Psychologie", "name":"pref_keyword_psychologie", "selected":false},
+                    {"label":"Historique", "name":"pref_keyword_historique", "selected":false},
+                    {"label":"Mystère", "name":"pref_keyword_mystere", "selected":false},
+                    {"label":"Suspense", "name":"pref_keyword_suspense", "selected":false},
+                    {"label":"Philosophie", "name":"pref_keyword_philosophie", "selected":false}, 
+                    {"label":"Humour", "name":"pref_keyword_humour", "selected":false},
+                    {"label":"Science-fiction", "name":"pref_keyword_science_fiction", "selected":false}, 
+                    {"label":"Enquête policière", "name":"pref_keyword_enquete_policiere", "selected":false}, 
+                    {"label":"Réaliste", "name":"pref_keyword_realiste", "selected":false}, 
+                    {"label":"Mythes & Légendes", "name":"pref_keyword_mythes_et_legendes", "selected":false}, 
+                    {"label":"Aventure", "name":"pref_keyword_aventure", "selected":false},
+                    {"label":"Espionnage", "name":"pref_keyword_espionnage", "selected":false},
+                    {"label":"Histoire d'amour", "name":"pref_keyword_histoire_d_amour", "selected":false}, 
+                    {"label":"Guerre", "name":"pref_keyword_guerre", "selected":false}, 
+                    {"label":"Horreur", "name":"pref_keyword_horreur", "selected":false}, 
+                    {"label":"Surnaturel", "name":"pref_keyword_surnaturel", "selected":false}
+                ],
+                "multiple":true
+            }
+        ]
+    },
+    "keywords":
+    {
+        "keyword_biographie":"Biographie",
+        "keyword_drame":"Drame",
+        "keyword_histoire_vraie":"Histoire vraie",
+        "keyword_mythes_et_legendes":"Mythes & Légendes",
+        "keyword_psychologie":"Psychologie",
+        "keyword_historique":"Historique",
+        "keyword_mystere":"Mystère",
+        "keyword_suspense":"Suspense",
+        "keyword_philosophie":"Philosophie", 
+        "keyword_humour":"Humour",
+        "keyword_science_fiction":"Science-fiction", 
+        "keyword_enquete_policiere":"Enquête policière", 
+        "keyword_realiste":"Réaliste", 
+        "keyword_aventure":"Aventure",
+        "keyword_espionnage":"Espionnage",
+        "keyword_histoire_d_amour":"Histoire d'amour", 
+        "keyword_guerre":"Guerre", 
+        "keyword_horreur":"Horreur", 
+        "keyword_surnaturel":"Surnaturel"
+    },
+    "emotions":
+    {
+        "emotion_joie":"Joie",
+        "emotion_colere":"Colère",
+        "emotion_tristesse":"Tristesse",
+        "emotion_peur":"Peur",
+        "emotion_degout":"Dégout",
+        "emotion_surprise":"Surprise"
+    },
+    "new_book":
+    {
+        "subscribe_book":"Vous devez vous réabonner pour recevoir de nouveaux livres.",
+        "this_book_date":"Vous pourrez choisir ce livre le",
+        "book_not_found":"Ce livre n'existe pas ...",
+        "no_more_book_title":"Vous avez épuisé le répertoire de Malib",
+        "no_more_book_subtitle":"Félicitations et merci pour votre fidélité ! Nous publions régulièrement de nouveaux livres, merci de revenir plus tard."
+    },
+    "confirmation":
+    {
+        "subscribe_title":"Félicitations, vous êtes abonné à Malib !",
+        "first_subscribe":"Nous allons maintenant apprendre à mieux vous connaître et vous offrir votre premier livre.",
+        "not_first_subscribe":"Nous sommes ravis de vous revoir, votre bibliothèque vous attend.",
+        "email_confirmed":"Votre adresse e-mail est validée avec succès !",
+        "change_password":"Votre mot de passe a bien été changé.",
+        "password_recovery_title":"E-mail envoyé",
+        "password_recovery_details":"Les instructions pour réinitialiser votre mot de passe ont été envoyées. Si le message n'apparaît pas dans votre boîte de réception, vérifiez vos courriers indésirables.",
+        "password_recovery_no_email_access":"Si vous n'avez plus accès à votre messagerie, veuillez",
+        "password_recovery_no_email_access_link":"nous contacter",
+        "contact":"Votre message a bien été envoyé.",
+        "delete_account":"Votre compte a bien été supprimé."
+    },
+    "library":{
+        "sort_by_v1":"Trier par:",
+        "sort_by_v2":"Trier",
+        "no_result":"Votre recherche ne donne aucun résultat.",
+        "book":"livre",
+        "books":"livres"
+    },
+    "notification":{
+        "R":{"img":"imgs/referral.png", "msg":"Vous avez parrainé un ami ! Vous recevez 2 nouveaux livres."},
+        "RD":{"img":"imgs/referral.png", "msg":"Vous avez parrainé un ami ! Votre abonnement passe de 6,99€ à 5,99€ par mois. Vous recevez 2 nouveaux livres."},
+        "NB":{"img":"imgs/book.png", "msg":"Vous avez reçu un nouveau livre !"}
+    },
+    "reader":
+    {
+        "notes":"Notes",
+        "save_note":"Enregistrer la note",
+        "cancel":"Annuler",
+        "copy":"Copier",
+        "create_note":"Créer une note",
+        "page":"Page",
+        "your_comment":"Votre commentaire"
+    },
+    "delete_account":{
+        "warning":"ATTENTION ! Si vous supprimez votre compte, vous perdrez tous vos avantages : abonnement, réductions, livres... Toutes vos données personnelles seront supprimées et vous n'aurez aucun moyen de les récupérer.",
+        "todo":"Pour confirmer la suppression de votre compte, veuillez taper «",
+        "todo_next":"» dans la zone texte puis cliquez sur le bouton Valider.",
+        "keyword":"supprimer",
+        "good_bye":"Nous sommes désolés de vous voir partir."
+    },
+    "info":{
+        "click_me":"Cliquez pour en savoir plus",
+        "beta":{"title":"Ce site est en phase de test", "content":"Il est possible que vous rencontriez des bugs ou des erreurs d'affichage. N'hésitez pas à utiliser le formulaire de contact pour nous aider à corriger ces anomalies. La phase de test prendra fin le 1er janvier 2024."},
+        "beta_step_2":{"title":"Ce site est en phase de test", "content":"Il est possible que vous rencontriez des bugs ou des erreurs d'affichage. N'hésitez pas à utiliser le formulaire de contact pour nous aider à corriger ces anomalies. La phase de test prendra fin le 1er janvier 2024, vous pouvez dès à présent vous abonner pour nous soutenir, sachez toutefois que la qualité de notre service sera fortement dégradée jusqu'à cette date."}
+    },
+    "logout":"Se déconnecter",
+    "not_a_referrer_price":"6,99€",
+    "referrer_price":"5,99€",
+    "about_us":"Qui sommes-nous ?",
+    "report_typo":"Signaler une faute de français",
+    "report_error":"Signaler une incohérence",
+    "report_sent":"Votre signalement a bien été envoyé.",
+    "book_credit_plural":"nouveaux livres en attente",
+    "book_credit":"nouveau livre en attente",
+    "next_book_date":"Vous pourrez choisir un nouveau livre le",
+    "network_failed":"Un problème est survenu",
+    "network_failed_instructions":"Vérifiez votre connexion internet et actualisez cette page. Si le problème persiste, veuillez attendre une résolution de notre part.",
+    "not_found_page":{"title":"Oups !", "subtitle":"Cette page n'existe pas ..."},
+    "fonts":["FUTURA", "MONTSERRAT", "BASKERVILLE", "GARAMOND"],
+    "date_format":"fr-FR",
+    "themes":{
+        "WHITE": { "background": "#fff", "color": "#171717", "link":"#aaa", "slider":"#ececec", "slider_range":"#d8d8d8"},
+        "LGREY": { "background": "#5d5d5d", "color": "#dfdfdf", "link":"#999", "slider":"#6c6c6c", "slider_range":"#848484"},
+        "DGREY": { "background": "#171717", "color": "#c8c8c8", "link":"white", "slider":"#262626", "slider_range":"#3a3a3a"}
+    }
+}

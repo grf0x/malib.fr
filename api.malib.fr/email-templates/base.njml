@@ -1,0 +1,19 @@
+<mjml>
+    <mj-body background-color="#171717">
+        <mj-section padding="10px" padding-top="50px">
+            <mj-column padding="20px" padding-top="50px"  padding-bottom="50px" background-color="#262626" border-radius="12px">
+                <mj-text align="center" padding-bottom="40px" font-size="16px" font-weight="200" color="white">{{msg}}</mj-text>
+                <mj-button href="{{link}}" height="60px" border-radius="10px" font-size="16px"  background-color="#D77878">Accéder à ma bibliothèque</mj-button>
+
+                <mj-text align="center" padding-top="40px" font-size="16px" font-weight="200" color="white">À bientôt sur Malib !</mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section padding-top="30px" padding-bottom="150px">
+            <mj-column>
+                              <mj-button href="{{unsubscribe}}" align="center" padding-top="0px" font-size="9px" font-weight="400" background-color="#262626" color="#737373">Pour modifier vos paramètres de communication veuillez cliquer ici.</mj-button>
+                <mj-text align="center" font-size="9px" font-weight="200" color="#737373">Vous recevez cet e-mail car vous êtes inscrit sur Malib.</mj-text>
+                <mj-text padding-top="2px" align="center" font-size="7px" color="#737373">****REDACTED****</mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>
